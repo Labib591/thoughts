@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>thoughts.</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-200 dark:bg-gray-900 dark:text-slate-50 p-0 m-0 box-border">
+    <div>
+      <header class="flex justify-between items-center ml-[20px]">
+        <a href="#"><h1
+          class="font-bold underline text-black text-[40px] dark:text-white"
+          >thoughts.</h1></a>
+        <div>
+          <input class="border-[1px] border-solid border-gray-700 rounded-[8px] text-[16px] p-[4px] w-[25rem] active:border-black active:rounded-sm active:border-solid" type="text" placeholder="search thoughts." />
+        </div>
+        <div class="flex justify-evenly items-center p-5 gap-2">
+          <button id="theme-toggle" class="px-4 py-2 text-[12px] bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded">
+            Dark/Light
+          </button>
+          <div class="rounded-[30px] h-[40px] w-[40px] overflow-hidden">
+            <a href="#">
+              <img
+              class="w-[100%] h-[100%]"
+                src="radek-skrzypczak-nzjMs7viEDs-unsplash.jpg"
+                alt="profile"
+              />
+            </a>
+          </div>
+          <a class="bg-gray-900 hover:bg-red-500/100 text-slate-50 hover:text-white rounded-[10px] p-3 font-bold text-[16px] transition-all data-[bg-white text-gray-900]:" href="#"><p>log out</p></a>
+        </div>
+      </header>
+    </div>
+    <nav class="ml-[10%] mt-[1%] absolute">
+      <ul class="list-none flex flex-col gap-6">
+        <li class="p-2 hover:bg-gray-300 hover:rounded-[28px] hover:p-2">
+          <a class="dark:text-white text-[24px] flex gap-3" href="#">
+            <img src="tag_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"alt="logo"/>home</a>
+        </li>
+        <li class="p-2 hover:bg-gray-300 hover:rounded-[28px] hover:p-2"><a id="options"  class="dark:text-white text-[24px] flex gap-3"  href="#"><img src="notifications_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="notifications">notifications</a></li>
+        <li class="p-2 hover:bg-gray-300 hover:rounded-[28px] hover:p-2">
+          <a id="options"  class="dark:text-white text-[24px] flex gap-3" href="#"><img src="search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"alt=""/>explore</a>
+        </li>
+        <li class="p-2 hover:bg-gray-300 hover:rounded-[28px] hover:p-2"><a id="options"  class="dark:text-white text-[24px] flex gap-3" href="#"><img src="mail_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="messages">
+          messages</a></li>
+        <li class="p-2 hover:bg-gray-300 hover:rounded-[28px] hover:p-2"><a id="options" class="dark:text-white text-[24px] flex gap-3"  href="#"><img src="bookmark_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="saved">
+          saved</a></li>
+        <li class="p-2 hover:bg-gray-300 hover:rounded-[28px] hover:p-2"><a id="options" class="dark:text-white text-[24px] flex gap-3"  href="#"><img src="groups_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="groups">community</a></li>
+        <li class="p-2 hover:bg-gray-300 hover:rounded-[28px] hover:p-2"><a id="options" class="dark:text-white text-[24px] flex gap-3"  href="#"><img src="more_horiz_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="more">more</a></li>
+      </ul>
+    </nav>
+    <div class="flex flex-col items-center gap-2">
+      <div>
+        <textarea 
+        class="w-[500px] h-[150px] box-border p-3 rounded-lg overflow-y-auto overflow-x-hidden whitespace-pre-wrap resize-none"
+        id="thoughts" placeholder="share your thoughts..."></textarea>
+      </div>
+      <button class="bg-gray-900 hover:bg-blue-700 text-[16px] font-bold text-slate-50  transition-all p-3 rounded-[10px] cursor-pointer">share</button>
+    </div> 
+
+    <div class="flex justify-center">
+      <div
+        class="flex flex-col h-auto w-[500px] p-4 gap-3 mt-[2%] border-[1px] border-solid border-black rounded-lg bg-white dark:bg-gray-900 dark:text-white
+         dark:border-red-500
+        dark:border-[1px] dark:border-solid"
+      >
+        <div class="flex items-center gap-3">
+          <div class="
+          w-[30px] h-[30px] rounded-[30px] overflow-hidden
+          border-2 border-black border-solid 
+          ">
+            <a href="#"><img src="clouds.png" alt="chobi"/></a>
+          </div>
+          <a href="#"><h3>username</h3></a>
+        </div>
+        <p class="lowercase">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
+          eveniet at incidunt eaque eligendi ullam quaerat ipsum, deserunt
+          tempore quod, architecto ut est! Fuga commodi ut totam deleniti
+          eligendi vitae. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Vel tenetur optio sequi fuga perferendis, nostrum maxime, et
+          accusantium ipsam voluptatem eaque consequuntur quae iure rem iste!
+          Qui fuga eum sequi.
+        </p>
+        <div class="flex gap-1 cursor-pointer">
+          <img
+            id="fav"
+            onclick="favtored()"
+            src="favorite_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="love"
+          />
+          <img
+            src="comment_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="comment"
+          />
+          <img
+            id="save"
+            onclick="saved()"
+            src="bookmark_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="save"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <div
+        class="flex flex-col h-auto w-[500px] p-4 gap-3 mt-[2%] border-[1px] border-solid border-black rounded-lg bg-white dark:bg-gray-900 dark:text-white
+         dark:border-red-500
+        dark:border-[1px] dark:border-solid"
+      >
+        <div class="flex items-center gap-3">
+          <div class="
+          w-[30px] h-[30px] rounded-[30px] overflow-hidden
+          border-2 border-black border-solid 
+          ">
+            <a href="#"><img src="clouds.png" alt="chobi"/></a>
+          </div>
+          <a href="#"><h3>username</h3></a>
+        </div>
+        <p class="lowercase">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
+          eveniet at incidunt eaque eligendi ullam quaerat ipsum, deserunt
+          tempore quod, architecto ut est! Fuga commodi ut totam deleniti
+          eligendi vitae. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Vel tenetur optio sequi fuga perferendis, nostrum maxime, et
+          accusantium ipsam voluptatem eaque consequuntur quae iure rem iste!
+          Qui fuga eum sequi.
+        </p>
+        <div class="flex gap-1 cursor-pointer">
+          <img
+            id="fav"
+            onclick="favtored()"
+            src="favorite_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="love"
+          />
+          <img
+            src="comment_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="comment"
+          />
+          <img
+            id="save"
+            onclick="saved()"
+            src="bookmark_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="save"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <div
+        class="flex flex-col h-auto w-[500px] p-4 gap-3 mt-[2%] border-[1px] border-solid border-black rounded-lg bg-white dark:bg-gray-900 dark:text-white
+         dark:border-red-500
+        dark:border-[1px] dark:border-solid"
+      >
+        <div class="flex items-center gap-3">
+          <div class="
+          w-[30px] h-[30px] rounded-[30px] overflow-hidden
+          border-2 border-black border-solid 
+          ">
+            <a href="#"><img src="clouds.png" alt="chobi"/></a>
+          </div>
+          <a href="#"><h3>username</h3></a>
+        </div>
+        <p class="lowercase">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
+          eveniet at incidunt eaque eligendi ullam quaerat ipsum, deserunt
+          tempore quod, architecto ut est! Fuga commodi ut totam deleniti
+          eligendi vitae. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Vel tenetur optio sequi fuga perferendis, nostrum maxime, et
+          accusantium ipsam voluptatem eaque consequuntur quae iure rem iste!
+          Qui fuga eum sequi.
+        </p>
+        <div class="flex gap-1 cursor-pointer">
+          <img
+            id="fav"
+            onclick="favtored()"
+            src="favorite_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="love"
+          />
+          <img
+            src="comment_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="comment"
+          />
+          <img
+            id="save"
+            onclick="saved()"
+            src="bookmark_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="save"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <div
+        class="flex flex-col h-auto w-[500px] p-4 gap-3 mt-[2%] border-[1px] border-solid border-black rounded-lg bg-white dark:bg-gray-900 dark:text-white
+         dark:border-red-500
+        dark:border-[1px] dark:border-solid"
+      >
+        <div class="flex items-center gap-3">
+          <div class="
+          w-[30px] h-[30px] rounded-[30px] overflow-hidden
+          border-2 border-black border-solid 
+          ">
+            <a href="#"><img src="clouds.png" alt="chobi"/></a>
+          </div>
+          <a href="#"><h3>username</h3></a>
+        </div>
+        <p class="lowercase">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
+          eveniet at incidunt eaque eligendi ullam quaerat ipsum, deserunt
+          tempore quod, architecto ut est! Fuga commodi ut totam deleniti
+          eligendi vitae. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Vel tenetur optio sequi fuga perferendis, nostrum maxime, et
+          accusantium ipsam voluptatem eaque consequuntur quae iure rem iste!
+          Qui fuga eum sequi.
+        </p>
+        <div class="flex gap-1 cursor-pointer">
+          <img
+            id="fav"
+            src="favorite_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="love"
+          />
+          <img
+            src="comment_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="comment"
+          />
+          <img
+            id="save"
+            src="bookmark_16dp_5F6368_FILL0_wght400_GRAD0_opsz20.svg"
+            alt="save"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
